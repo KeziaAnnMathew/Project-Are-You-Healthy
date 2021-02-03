@@ -1,0 +1,33 @@
+<app-navigation></app-navigation>
+<div class="userquery">
+    <div class="left">
+        <button class="btn btnwidthleft">My Queries</button>
+        <div id="querysection">
+            <div [class.d-none] class="alert alert-danger" *ngIf="noquery">No Queries Available</div>
+            <div *ngFor="let query of qry;let i=index">
+                <h3><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}</a></h3>
+                <div class="singlequery collapse"id="singlequerysection-{{i}}">
+                    <div class="querydet"><p><strong class="str">Affected Part</strong>: {{query.area}}</p>
+                        <p><strong class="str">Symptoms & Comments</strong>: {{query.comments}}</p>
+                        <p><strong class="str">Suggestions</strong>: {{query.suggestions}}</p></div>
+                    <div class="btnalign">
+                        <button class="btn-primary desbtn" (click)="editquery(query)"><mat-icon>edit</mat-icon></button>
+                        <button class="btn-danger desbtn" (click)="deletequery(query)"><mat-icon>delete</mat-icon></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <button class="btn btnwidthright" type="button" data-toggle="collapse" data-target="#addformsection" aria-expanded="false" aria-controls="addformsection">Add New Queries</button>
+        <div class="collapse multi-collapse" id="addformsection">
+            <form [formGroup]="addform" (ngSubmit)=adding()>
+                <h4><strong class="str1">Heading</strong>: &nbsp; <input type="text"  formControlName="heading" name="heading" [(ngModel)]="queryItem.heading" required ></h4>
+                <h4><strong class="str1">Affected Part</strong>: &nbsp; <input type="text" formControlName="area" name="area"  [(ngModel)]="queryItem.area" required ></h4>
+                <h4><strong class="str1">Symptoms & Comments</strong>: &nbsp; <input type="text" formControlName="comments" name="comments" [(ngModel)]="queryItem.comments" required ></h4>
+                <button type="submit" class="btn-success addbtn" [disabled]="addform.invalid"><mat-icon>add</mat-icon></button>
+            </form>
+        </div>
+    </div> 
+    
+</div>

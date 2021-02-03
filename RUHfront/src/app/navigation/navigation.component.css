@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+.logo{
+    height: 47px;
+    width:47px;
+    padding-top: 0!important;
+    padding-left: 3px!important;
+}
+.navig{
+    margin:0 !important;
+    padding:0!important;
+    height:45px;
+}
+.nav-link{
+    color:#4481eb!important;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+a:hover{
+    color:violet!important;
+}
+.myactive{
+    color:violet!important;
+}

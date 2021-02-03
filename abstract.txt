@@ -1,0 +1,6 @@
+
+A website for checking an individuals health based on all the factors like height, weight, cholesterol, B.P, blood sugar level etc.
+Two types of roles include, users and admin, where admin is likely a health worker.
+Users can register and login. They can add,edit and delete there health factors and add additional comments if any.
+Admin, a Health worker, can access all users data and then assign status as either action needed or follow up.
+As a future scope the admin can provide suggestions or prescription to the user based on his or her health history.

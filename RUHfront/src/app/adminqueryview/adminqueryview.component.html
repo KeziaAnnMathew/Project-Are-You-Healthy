@@ -1,0 +1,42 @@
+<app-navigation></app-navigation>
+<div class="adminquery">
+    <div class="left">
+        <button class="btn btnwidthleft" type="button">Profile Details</button>
+        <div id="profilesection">
+            <div class="leftprof">
+                <img  class="image"[src]="profile.img" alt="">
+            </div>
+            <div class="rightprof">
+                
+                <h2>{{profile.fname+" "+ profile.lname}}</h2>
+                <h3><strong  class="str1">Email</strong>: {{profile.email}}</h3>
+                <h4><strong class="str1">Gender</strong>: {{profile.gender}}</h4>
+                <h4><strong class="str1">Height</strong>: {{profile.height}}cm</h4>
+                <h4><strong class="str1">Weight</strong>: {{profile.weight}}kg</h4>
+                <h4><strong class="str1">BMI</strong>: {{profile.bmi}}</h4>
+                <h4><strong class="str1">Pulse</strong>: {{profile.pulse}}</h4>
+            </div>
+            
+        </div>
+    </div>
+    <div class="right">
+        <button class="btn btnwidthright" type="button" data-toggle="collapse" data-target="#querysection" aria-expanded="false" aria-controls="querysection">View User Queries</button>
+        <div class="collapse multi-collapse" id="querysection">
+            <div [class.d-none] class="alert alert-danger" *ngIf="noquery">No Queries Available</div>
+            <div *ngFor="let query of queries;let i=index">
+            <h3><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}</a></h3>
+            <div class="singlequery collapse"id="singlequerysection-{{i}}">
+                <p><strong class="str">Affected Part</strong>:{{query.area}}</p>
+                <p><strong class="str">Symptoms & Comments</strong>: {{query.comments}}</p>
+                <a class="btn btn-link sgbtn" type="button" data-toggle="collapse" href="#sugges-{{i}}" aria-expanded="false" aria-controls="sugges">Suggestions</a>
+                <div class="collapse adjst" id="sugges-{{i}}">
+                <textarea class="textar" [(ngModel)]="query.suggestions"></textarea>
+                <button class="btn-primary desbtn" (click)="addsugg(query)"><mat-icon>edit</mat-icon></button>
+                <button class="btn-danger desbtn"*ngIf="query.suggestions" (click)="deletesugg(query)"><mat-icon>delete</mat-icon></button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+</div>

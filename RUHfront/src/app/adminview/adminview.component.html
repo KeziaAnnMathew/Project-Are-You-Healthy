@@ -1,0 +1,17 @@
+<app-navigation></app-navigation>
+<div class="adminview">
+    <div class="cardstyle" *ngFor="let profile of profiles ">
+   <!-- | filter:filterName:'fname'" -->
+
+        <div class="card ml-4 mb-5 text-center box" style="width: 15rem;">
+            <img class="card-img-top"  [src]="profile.img" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">{{profile.fname+" "+ profile.lname}}</h2>
+              <h4 class="card-text">Gender: {{profile.gender}}</h4>
+              <h4 class="card-text">BMI: {{profile.bmi}}</h4>
+              <h4 class="card-text">Pulse: {{profile.pulse}}</h4>
+              <button class="btn btn-primary button" (click)="getprofilequery(profile)">Get details</button>
+            </div>
+        </div>
+    </div>
+</div>

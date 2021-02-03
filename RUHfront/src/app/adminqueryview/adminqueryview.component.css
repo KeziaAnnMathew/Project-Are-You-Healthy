@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+.adminquery{
+    background-image: url('../../assets/images/cool-background.svg');
+    background-size: cover;
+    height:100%;
+    background-attachment: fixed;
+    display: flex;
+    padding:10px;
+}
+.image{
+    height: 180px;
+    width:180px;
+    border-radius: 5px;
+    margin-left:12%;
+    margin-top:15%;
+}
+.left{
+    width:50%;
+    /* display: flex; */
+}
+.leftprof{
+    width:55%;
+    
+}
+.rightprof{
+    color:white;
+    padding-left: 35px;
+}
+.right{
+    width:50%
+}
+#profilesection{
+    display: flex;
+    /* flex-direction: row; */
+} 
+.btnwidthleft{
+    background-color: #4481eb;
+    color:white;
+    width:95%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.btnwidthright{
+    background-color:white;
+    color:#4481eb;
+    border-color: white;
+    width:95%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.querybtn{
+    background-color:#e3def0;
+    color:black;
+    width:90%;
+    margin-left: 30px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-family: "Poppins","sans-serif";
+}
+.singlequery{
+    margin-left: 30px;
+    padding-left: 10px;
+    font-family: "Poppins","sans-serif";
+}
+.sgbtn{
+    color:white;
+    background-color:#4481eb;
+    text-decoration: none;
+    margin-bottom:10px;
+}
+.textar{
+    width:55%;
+    height:150px;
+    margin-left: 21%;
+    padding-left: 2px;
+    border:white;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.desbtn{
+    margin-left: 5px;
+    border-radius: 5px;
+    width:40px;
+    height: 40px;
+}
+.adjst{
+    margin-bottom: 15px;
+}
+.str{
+    display:inline-block;
+    width:200px;
+    text-align:left;
+}
+.str1{
+    display:inline-block;
+    width:80px;
+    text-align:left;
+}
+.alert{
+    width:80%!important;
+}

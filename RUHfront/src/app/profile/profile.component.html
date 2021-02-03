@@ -1,0 +1,23 @@
+<app-navigation></app-navigation>
+<div class="userprofile">
+    <div class="usersection">
+        <div class="imagesection">
+            <p><img style="width:150px;height:150px;" [src]="selectedfile" alt=""></p>
+            <h1><strong>{{profile.fname+" "+ profile.lname}}</strong></h1>
+            <h3><strong class="str1">Email</strong>: {{profile.email}}</h3>
+           
+            
+        </div>
+        <div class="profilesection">
+            <h4><strong class="str1">Gender</strong>: {{profile.gender}}</h4>
+            <h4><strong class="str1">Height</strong>: {{profile.height}} cm</h4>
+            <h4><strong class="str1">Weight</strong>: {{profile.weight}} Kg</h4>
+            <h4><strong class="str1">BMI</strong>: {{profile.bmi}}</h4>
+            <h4><strong class="str1">Pulse</strong>: {{profile.pulse}}</h4>
+           <div class="btnclass"><button class="btn-primary desbtn" (click)="editprofile()"><mat-icon>edit</mat-icon> <p class="btntext">My Profile</p></button>
+            <button class="btn-primary desbtn" (click)="getquery()"><mat-icon>help</mat-icon> <p class="btntext">My Queries</p></button></div> 
+    
+        </div>
+    </div>
+
+</div>

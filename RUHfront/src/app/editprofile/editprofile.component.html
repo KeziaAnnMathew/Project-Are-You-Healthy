@@ -1,0 +1,43 @@
+<!-- <form (ngSubmit)=editprofile()>
+    <div class="input-field">
+        <input type="number"  name="weight" placeholder="eight(kg)" [(ngModel)]="profileItem.weight" required >
+    </div>
+    <div class="input-field">
+        <input type="number"  name="height" placeholder="height(cm)" [(ngModel)]="profileItem.height" required >
+    </div>
+    <div class="input-field">
+        <input type="number"  name="pulse" placeholder="pulse" [(ngModel)]="profileItem.pulse" required >
+    </div>
+        <button type="submit">Edit</button>
+</form> -->
+<app-navigation></app-navigation>
+<div class="userprofile">
+    <div>
+        <form (ngSubmit)=editprofile() class="usersection">
+            <div class="imagesection">
+                <p><img style="width:150px;height:150px;" [src]="profileItem.img" alt=""><input name="img" type="file" [(ngModel)]="profileItem.img" id="img" (change)="upload($event)" accept="image/*" hidden required>
+                    <label class="btn" for="img"><mat-icon class="icn">add_photo_alternate</mat-icon></label>
+                </p>
+                <h1><strong>{{profileItem.fname+" "+ profileItem.lname}}</strong></h1>
+                <h3><strong class="str1">Email</strong>: {{profileItem.email}}</h3>
+                
+                
+            </div>
+            <div class="profilesection">
+                <h3><strong class=str1>Gender</strong>: <select name="gender" [(ngModel)]="profileItem.gender">
+                    <option value="" disabled selected>Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                </select></h3>
+                <h4><strong class="str1">Height</strong>: <input type="number"  name="height" placeholder="height(cm)" [(ngModel)]="profileItem.height" required ></h4>
+                <h4><strong class="str1">Weight</strong>: <input type="number"  name="weight" placeholder="weight(kg)" [(ngModel)]="profileItem.weight" required ></h4>
+                <h4><strong class="str1">BMI</strong>: {{profileItem.bmi}}</h4>
+                <h4><strong class="str1">Pulse</strong>: <input type="number"  name="pulse" placeholder="pulse" [(ngModel)]="profileItem.pulse" required ></h4>
+               <div class="btnclass"><button class="btn-primary desbtn" type="submit"><mat-icon>edit</mat-icon> </button></div>
+            </div>
+        </form>
+        
+    </div>
+
+</div>

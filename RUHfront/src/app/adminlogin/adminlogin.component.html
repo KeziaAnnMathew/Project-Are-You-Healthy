@@ -1,0 +1,47 @@
+<app-navigation></app-navigation>
+<div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form (ngSubmit)=validateadmin() class="sign-in-form">
+          <h2 class="title">Sign in</h2>
+          <div [class.d-none] class="alert alert-danger" *ngIf="errorval">Admin Not Found</div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="email" placeholder="Email/Username" [(ngModel)]="admin.email" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input matInput type="password" name="password" placeholder="password" [type]="hide? 'password':'text'" [(ngModel)]="admin.password" required /><mat-icon class="fa" (click)="hide= !hide">{{hide ? 'visibility':'visibility_off'}}</mat-icon>
+          </div>
+          <input type="submit" value="Login" class="btn solid" />
+          <p class="social-text">Or Sign in with social platforms</p>
+          <div class="social-media">
+            <a class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <div><p class="social-text">Not an Admin?Try logging in <a routerLink="/login">here</a></p></div>
+        </form>
+        </div>
+    </div>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Welcome Doctor</h3>
+          <p>
+           Many people are waiting for their concerns to be resolved. You are needed here.
+          </p>
+        </div>
+        <img src="../../assets/images/medres.svg" class="image" alt="" />
+      </div>
+      </div>
+    </div>

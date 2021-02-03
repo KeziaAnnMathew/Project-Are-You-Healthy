@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+.userquery{
+    background-image: url('../../assets/images/cool-background.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    height:100%;
+    display: flex;
+    padding:20px;
+}
+.left{
+    width:50%;
+    /* display: flex; */
+}
+.btnwidthleft{
+    background-color: #4481eb;
+    color:white;
+    width:90%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.querybtn{
+    background-color:#e3def0;
+    color:black;
+    width:70%;
+    margin-left: 40px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-family: "Poppins","sans-serif";
+}
+.singlequery{
+    margin-left: 30px;
+    padding-left: 10px;
+    font-family: "Poppins","sans-serif";
+}
+.btnalign{
+    margin-left: 40%;
+}
+.desbtn{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width:40px;
+    height: 40px;
+}
+.str{
+    display:inline-block;
+    width:200px;
+    text-align:left;
+}
+.right{
+    width:50%
+}
+.addbtn{
+    margin-left: 70%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width:40px;
+    height: 40px;
+}
+.btnwidthright{
+    background-color:white;
+    color:#4481eb;
+    border-color: white;
+    width:80%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.str1{
+    display:inline-block;
+    width:35%;
+    color:white;
+    text-align:left;
+    margin-left: 25px;
+}
+.alert{
+    width:80%!important;
+}

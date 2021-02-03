@@ -1,0 +1,38 @@
+@import "../query/query.component.css";
+/* @import '../adminview/adminview.component.css'; */
+.str1{
+    color:black;
+    margin:0!important;
+}
+.cardstyle{
+    margin-left:20%!important ;
+    padding:0;
+    position: fixed;
+}
+.head{
+    font-family: 'Poppins','sans-serif';
+    margin-left: 3%;
+    color:#4481eb;
+    padding-top: 10px;
+    /* padding-left: 20%; */
+}
+h1{
+    font-size:40px;
+    font-weight: 500;
+}
+.card{
+    margin:20%;
+    margin-left:50%;
+    height: 14rem;
+    width:20rem!important;
+}
+form{
+    padding:20px;
+    width:20rem;
+}
+.edbtn{
+   width:40px;
+   height: 40px;
+   margin-left: 40%;
+   border-radius: 5px;
+}

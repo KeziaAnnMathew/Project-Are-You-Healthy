@@ -1,0 +1,155 @@
+
+.indexcontainer{
+    padding:0!important;
+    margin:0!important;
+    width:100%;
+}
+.top{
+    padding:0!important;
+    width:100%;
+    height: 60vh;
+    background:url('../../assets/images/ted.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 60vh;
+    display: flex;
+}
+.quote{
+    width:72%;
+}
+.makeprof{
+    padding-top: 17%;
+    color:white;
+}
+.makeprof button{
+    margin-left: 120px;
+}
+.makeprof button a{
+   color:white;
+   text-decoration: none;
+}
+.bottom{
+    display:flex;
+}
+.bottomleft{
+    background-image: url('../../assets/images/dr3.jpg');
+    opacity: 0.8;
+    width:33vw;
+    height:40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.leftlayer{
+    background-color: rgba(93, 186, 248, 0.986);
+    width:33vw;
+    height:40vh;
+    opacity: 0.7;
+    position: absolute;
+}
+.bottommid{
+    background-image: url('../../assets/images/dr1.jpg');
+    width:33vw;
+    opacity: 0.8;
+    height:40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.midlayer{
+    background-color: rgba(82, 79, 245, 0.986);
+    width:33vw;
+    height:40vh;
+    opacity: 0.7;
+    position: absolute;
+}
+.bottomright{
+    background-image: url('../../assets/images/dr2.jpg');
+    width:33vw;
+    opacity: 0.8;
+    height:40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.rightlayer{
+    background-color: rgba(199, 73, 248, 0.986);
+    width:33vw;
+    height:40vh;
+    opacity: 0.7;
+    position: absolute;
+}
+h1{
+    color:white;
+    font-weight: 500;
+    /* text-align: center; */
+    padding-top: 50px;
+    padding-left:20px;
+    text-decoration: underline black;
+}
+h3{
+    color:white;
+    padding-left:40%;
+    padding-top: 30px;
+    padding-right: 10%;
+}
+blockquote h2 {
+    padding: 15px;
+    /* background: rgba(238, 238, 238, 0.616); */
+    color:white;
+    font-size:25px;
+    width:30%;
+    border-radius: 5px;
+    margin-left:20px;
+}
+figcaption{
+    color:white;
+    font-size:25px;
+    font-weight: 500;
+    padding-left:100px;
+}
+h4{
+    color:gray;
+    font-size: 30px;
+    font-weight: 400px;
+    text-align:center;
+    padding-top:30px;
+    padding-bottom: 20px;
+    /* background-color: aliceblue; */
+    
+}
+.working{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    height:35vh;
+    width:350px;
+}
+.step{
+    height:50vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: row;
+}
+.stephead{
+    padding-top: 30px;
+    font-size: 60px;
+    color: rgb(148, 147, 147);
+}
+.title{
+    /* color:white; */
+    font-size: 27px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.stepdesc{
+    display: flex;
+    font-size: 20px;
+    padding-left: 10px;
+}
+footer{
+    background-color: rgb(207, 205, 205);
+    height:30px;
+    text-align: center;
+    font-weight: 600;
+    padding-top:5px
+}
