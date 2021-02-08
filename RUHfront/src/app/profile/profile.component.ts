@@ -27,10 +27,10 @@ export class ProfileComponent implements OnInit {
   })
 }
 getquery(){
-  this.router.navigate([`profile/query/${this.id}`])
+  this.router.navigate([`profile/query`])
 }
 editprofile(){
-  this.router.navigate([`profile/editprofile/${this.id}`])
+  this.router.navigate([`profile/editprofile`])
 }
 
 }

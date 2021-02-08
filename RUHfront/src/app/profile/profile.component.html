@@ -1,23 +1,50 @@
 <app-navigation></app-navigation>
-<div class="userprofile">
-    <div class="usersection">
-        <div class="imagesection">
-            <p><img style="width:150px;height:150px;" [src]="selectedfile" alt=""></p>
-            <h1><strong>{{profile.fname+" "+ profile.lname}}</strong></h1>
-            <h3><strong class="str1">Email</strong>: {{profile.email}}</h3>
-           
+<div class="maincont">
+    <div class="det">
+        <div class="section1">
+            <div class="image">
+                <img style="width:200px;height:200px;border-radius: 100%;" [src]="selectedfile" alt="">
+                <div class="personal">
+                    <h1>{{profile.fname+" "+ profile.lname}}</h1>
+                    <h3>{{profile.email}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="deth">
+                <div class="hedng"></div>
+                <div class="data">
+                    <h3><p>Bio Metrics</p></h3>
+                    <h4><strong class="str1">Gender</strong>: {{profile.gender}}</h4>
+                    <h4><strong class="str1">Height</strong>: {{profile.height}} cm</h4>
+                    <h4><strong class="str1">Weight</strong>: {{profile.weight}} Kg</h4>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <h1>Having Concerns about Your Health?!<br>Let Us Help You...</h1>
+            <a (click)="getquery()">Get Expert Help <mat-icon>fast_forward</mat-icon></a>
             
         </div>
-        <div class="profilesection">
-            <h4><strong class="str1">Gender</strong>: {{profile.gender}}</h4>
-            <h4><strong class="str1">Height</strong>: {{profile.height}} cm</h4>
-            <h4><strong class="str1">Weight</strong>: {{profile.weight}} Kg</h4>
-            <h4><strong class="str1">BMI</strong>: {{profile.bmi}}</h4>
-            <h4><strong class="str1">Pulse</strong>: {{profile.pulse}}</h4>
-           <div class="btnclass"><button class="btn-primary desbtn" (click)="editprofile()"><mat-icon>edit</mat-icon> <p class="btntext">My Profile</p></button>
-            <button class="btn-primary desbtn" (click)="getquery()"><mat-icon>help</mat-icon> <p class="btntext">My Queries</p></button></div> 
-    
+    </div>
+    <div class="health">
+        <div class="bmi">
+            <div class="hedng"><p>B</p></div>
+            <div class="data">
+                <h3><p>BMI</p></h3>
+                <h4>{{profile.bmi}}</h4>
+            </div>
+        </div>
+        <div class="bmi">
+            <div class="hedng"><p>P</p></div>
+            <div class="data">
+                <h3><p>Pulse</p></h3>
+                <h4>{{profile.pulse}}</h4>
+            </div>
+        </div>
+        <div class="update">
+            <h1>Profile needs updation???</h1>
+            <div class="btnclass"><button class="btn-primary desbtn" (click)="editprofile()"><mat-icon>edit</mat-icon> <p class="btntext">My Profile</p></button>
         </div>
     </div>
-
 </div>

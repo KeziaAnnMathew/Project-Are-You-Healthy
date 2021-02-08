@@ -1,5 +1,5 @@
 @import "../query/query.component.css";
-/* @import '../adminview/adminview.component.css'; */
+
 .str1{
     color:black;
     margin:0!important;
@@ -13,18 +13,20 @@
     font-family: 'Poppins','sans-serif';
     margin-left: 3%;
     color:#4481eb;
-    padding-top: 10px;
-    /* padding-left: 20%; */
+    padding-top: 30px;
 }
 h1{
     font-size:40px;
     font-weight: 500;
 }
 .card{
-    margin:20%;
+    margin:30%;
     margin-left:50%;
     height: 14rem;
     width:20rem!important;
+}
+.card:hover{
+    box-shadow: 2px 0px 5px black;
 }
 form{
     padding:20px;
@@ -35,4 +37,19 @@ form{
    height: 40px;
    margin-left: 40%;
    border-radius: 5px;
+}
+
+.form.normal-form{
+    margin:10px
+}
+.controles-container{
+    width:100%;
+    padding:5px;
+}
+.edbtn:disabled{
+    color: #a0a0a0;
+}
+input[type=text]{
+    border:none;
+    border-bottom: 2px solid rgba(150, 150, 150, 0.925);
 }

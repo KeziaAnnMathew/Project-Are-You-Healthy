@@ -5,19 +5,36 @@
     padding-top: 0!important;
     padding-left: 3px!important;
 }
-.navig{
-    margin:0 !important;
-    padding:0!important;
-    height:45px;
-}
 .nav-link{
-    color:#4481eb!important;
+    color:#000000!important;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
 a:hover{
-    color:violet!important;
+    font-weight: 900;
+   color:black!important;
 }
 .myactive{
-    color:violet!important;
+    font-weight: 900;
+    color:black!important;
+}
+.butn{
+    background-color: white;
+    border:1px solid #000000;
+}
+.butn:hover{
+    background-color:black;
+    color: white;
+
+}
+.nav-link:hover{
+    cursor: pointer;
+}
+nav{
+    margin:0!important;
+    position: fixed;
+    width:100%;
+    height: 45px;
+    background-color: white;
+    z-index: 9;
 }

@@ -1,8 +1,8 @@
 .userprofile{
-    background-image: url('../../assets/images/cool-background.svg');
+    background-image: url('../../assets/images/19366.jpg');
     background-size: cover;
     height:100%;
-    padding:20px;
+    padding:50px 20px 20px 20px;
     
 }
 .usersection{
@@ -55,7 +55,7 @@
 }
 .desbtn{
     margin-top: 5px;
-    margin-left: 110px;
+    margin-left: 95px;
     border-radius: 5px;
     width:40px;
     height: 40px;
@@ -68,6 +68,16 @@
     padding-top: 5px;
     font-size: medium;
 }
-/* .imagedit { position: relative; }
-.imagedit img { display: block; }
-.imagedit mat-icon { position: absolute; bottom:0; left:0; } */
+input{
+    border:none;
+    border-bottom: 2px solid rgba(158, 158, 158, 0.856);
+}
+.pwdbtn{
+    border-radius: 5px;
+    width:140px;
+    height: 40px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 90px;
+}

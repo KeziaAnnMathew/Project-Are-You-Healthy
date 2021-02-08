@@ -1,15 +1,3 @@
-<!-- <form (ngSubmit)=editprofile()>
-    <div class="input-field">
-        <input type="number"  name="weight" placeholder="eight(kg)" [(ngModel)]="profileItem.weight" required >
-    </div>
-    <div class="input-field">
-        <input type="number"  name="height" placeholder="height(cm)" [(ngModel)]="profileItem.height" required >
-    </div>
-    <div class="input-field">
-        <input type="number"  name="pulse" placeholder="pulse" [(ngModel)]="profileItem.pulse" required >
-    </div>
-        <button type="submit">Edit</button>
-</form> -->
 <app-navigation></app-navigation>
 <div class="userprofile">
     <div>
@@ -20,7 +8,7 @@
                 </p>
                 <h1><strong>{{profileItem.fname+" "+ profileItem.lname}}</strong></h1>
                 <h3><strong class="str1">Email</strong>: {{profileItem.email}}</h3>
-                
+
                 
             </div>
             <div class="profilesection">
@@ -30,11 +18,12 @@
                         <option value="Female">Female</option>
                         <option value="Transgender">Transgender</option>
                 </select></h3>
-                <h4><strong class="str1">Height</strong>: <input type="number"  name="height" placeholder="height(cm)" [(ngModel)]="profileItem.height" required ></h4>
-                <h4><strong class="str1">Weight</strong>: <input type="number"  name="weight" placeholder="weight(kg)" [(ngModel)]="profileItem.weight" required ></h4>
+                <h4><strong class="str1">Height</strong>: <input type="number" style="width: 115px;"  name="height" placeholder="height(cm)" [(ngModel)]="profileItem.height" required ></h4>
+                <h4><strong class="str1">Weight</strong>: <input type="number" style="width: 115px;" name="weight" placeholder="weight(kg)" [(ngModel)]="profileItem.weight" required ></h4>
                 <h4><strong class="str1">BMI</strong>: {{profileItem.bmi}}</h4>
-                <h4><strong class="str1">Pulse</strong>: <input type="number"  name="pulse" placeholder="pulse" [(ngModel)]="profileItem.pulse" required ></h4>
-               <div class="btnclass"><button class="btn-primary desbtn" type="submit"><mat-icon>edit</mat-icon> </button></div>
+                <h4><strong class="str1">Pulse</strong>: <input type="number" style="width: 115px;" name="pulse" placeholder="pulse" [(ngModel)]="profileItem.pulse" required ></h4>
+               <div class="btnclass"><button class="btn-primary desbtn" type="submit"><mat-icon>edit</mat-icon> </button>
+            <button class="btn-dark pwdbtn" (click)="change()">change password</button></div>
             </div>
         </form>
         

@@ -1,7 +1,7 @@
 <app-navigation></app-navigation>
 <div class="adminview">
-    <div class="cardstyle" *ngFor="let profile of profiles ">
-   <!-- | filter:filterName:'fname'" -->
+    <div class="cardstyle" *ngFor="let profile of profiles
+   | filter:filterName:'fname':'lname'">
 
         <div class="card ml-4 mb-5 text-center box" style="width: 15rem;">
             <img class="card-img-top"  [src]="profile.img" alt="Card image cap">

@@ -8,8 +8,9 @@ const QuerySchema = new Schema({
    area:String,
    comments:String,
    suggestions:String,
-   userid:String
-   // date:Date
+   userid:String,
+   img:String,
+   date:Date
 });
 
 var Querydata = mongoose.model('querydata', QuerySchema);

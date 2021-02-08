@@ -7,17 +7,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li>
-          <a class="nav-link" routerLink='/' routerLinkActive="myactive active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-        </li>
+          <a class="nav-link" routerLink='/' routerLinkActive="myactive active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+          <li> <a class="nav-link" routerLink="/profile/editprofile" *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active">Edit Profile</a></li>
+          <li> <a class="nav-link" routerLink="/profile/query" *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active">My Concerns</a></li>
+        
       </ul>
       <form *ngIf="serv.loggedIn() && serv.searchfn()" class="form-inline my-2 my-lg-0">
         <input name="searchkey" [(ngModel)]='searchkey' class="form-control mr-sm-2" type="search" (ngModelChange)="onsearch($event)" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
       </form>
       <ul class="navbar-nav navbar-right">
-        <li> <a class="nav-link" routerLink="/profile" *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active">{{profile.uname}}</a></li>
+        <li> <a class="nav-link" routerLink="/profile" [class.d-none] *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active" [routerLinkActiveOptions]="{exact:true}">{{profile.uname}}</a></li>
         <li> <a class="nav-link" routerLink="/adminview" *ngIf="serv.loggedIn() && !serv.userlogg()" routerLinkActive="myactive active">Admin Profile</a></li>
-        <li> <a class="nav-link" routerLink="/login" *ngIf="!serv.loggedIn()" routerLinkActive="myactive active" [routerLinkActiveOptions]="{exact:true}">Login|Signup</a></li>
+        <li> <a class="nav-link" routerLink="/login" *ngIf="!serv.loggedIn()" routerLinkActive="myactive active">Login|Signup</a></li>
         <li> <a class="nav-link" *ngIf="serv.loggedIn()" (click)="logoutfn()">Logout</a></li>
       </ul>
     </div>

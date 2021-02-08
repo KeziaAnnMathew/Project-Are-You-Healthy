@@ -35,7 +35,6 @@ app.post('/login/admin',function(req,res){
     res.header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS")
     let userdataname= req.body.user.email;
     let userdatapassword=req.body.user.password;
-    // {$or: [{username:userdataname},{email:userdataname}],password:userdatapassword}
         Admindata.findOne({$or: [{uname:userdataname},{email:userdataname}],password:userdatapassword},(err,doc)=>{
             if(!doc){
                 res.send({doc:doc});

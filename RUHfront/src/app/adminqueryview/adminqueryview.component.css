@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 .adminquery{
-    background-image: url('../../assets/images/cool-background.svg');
+    background-image: url('../../assets/images/19366.jpg');
     background-size: cover;
     height:100%;
     background-attachment: fixed;
     display: flex;
-    padding:10px;
+    padding:50px 10px 10px 10px;
 }
 .image{
     height: 180px;
@@ -23,7 +23,7 @@
     
 }
 .rightprof{
-    color:white;
+    /* color:white; */
     padding-left: 35px;
 }
 .right{
@@ -34,24 +34,27 @@
     /* flex-direction: row; */
 } 
 .btnwidthleft{
-    background-color: #4481eb;
+    background-color:black;
     color:white;
     width:95%;
     text-align: left;
     margin-bottom: 20px;
 }
 .btnwidthright{
-    background-color:white;
-    color:#4481eb;
+    background-color:rgb(248, 248, 248);
+    color:black;
+    font-weight: 500;
     border-color: white;
     width:95%;
     text-align: left;
     margin-bottom: 20px;
 }
 .querybtn{
+    display:flex;
     background-color:#e3def0;
     color:black;
     width:90%;
+    height: 6vh;
     margin-left: 30px;
     margin-bottom: 3px;
     text-align: left;
@@ -99,4 +102,10 @@
 }
 .alert{
     width:80%!important;
+}
+.tgl{
+    width:30%;
+}
+.wdth{
+    width:80%;
 }

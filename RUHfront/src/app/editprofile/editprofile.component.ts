@@ -9,7 +9,7 @@ import { UserModel } from '../user.model';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent implements OnInit {
-  id='';
+  id:any='';
   prof:any
   bmi:any;
   selectedFile:any|File;
@@ -18,15 +18,12 @@ export class EditprofileComponent implements OnInit {
 
   ngOnInit(): void {
     this.serv.search=false;
-    this.route.params.subscribe(params => {
-      this.id = params['id'];
+    this.id=localStorage.getItem('id');
       this.serv.getprofile(this.id)
       .subscribe((data)=>{
         this.profileItem= JSON.parse(JSON.stringify(data));
         this.selectedFile=this.profileItem.img;
-        console.log(this.selectedFile)
       })
-    })
     
     this.prof={
       height:this.profileItem.height,
@@ -50,9 +47,11 @@ export class EditprofileComponent implements OnInit {
     this.profileItem.bmi=this.bmi;
     this.serv.editprofile(this.id,this.profileItem,this.selectedFile)
     .subscribe((data)=>{
-      console.log(data)
     })
     this.router.navigate([`/profile`])
+  }
+  change(){
+    this.router.navigate([`profile/editprofile/changepwd`])
   }
   
 }

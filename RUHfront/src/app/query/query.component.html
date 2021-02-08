@@ -1,11 +1,11 @@
 <app-navigation></app-navigation>
 <div class="userquery">
     <div class="left">
-        <button class="btn btnwidthleft">My Queries</button>
+        <button class="btn btnwidthleft">My Concerns</button>
         <div id="querysection">
             <div [class.d-none] class="alert alert-danger" *ngIf="noquery">No Queries Available</div>
-            <div *ngFor="let query of qry;let i=index">
-                <h3><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}</a></h3>
+            <div *ngFor="let query of qry | filterquery:filterName:'heading';let i=index">
+                <h3 class="toggle"><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}<p class="wdth"></p><p class="tgl">{{query.date | slice:0:10}}</p></a>  </h3>
                 <div class="singlequery collapse"id="singlequerysection-{{i}}">
                     <div class="querydet"><p><strong class="str">Affected Part</strong>: {{query.area}}</p>
                         <p><strong class="str">Symptoms & Comments</strong>: {{query.comments}}</p>
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="right">
-        <button class="btn btnwidthright" type="button" data-toggle="collapse" data-target="#addformsection" aria-expanded="false" aria-controls="addformsection">Add New Queries</button>
+        <button class="btn btnwidthright" type="button" data-toggle="collapse" data-target="#addformsection" aria-expanded="false" aria-controls="addformsection">Add New Concern</button>
         <div class="collapse multi-collapse" id="addformsection">
             <form [formGroup]="addform" (ngSubmit)=adding()>
                 <h4><strong class="str1">Heading</strong>: &nbsp; <input type="text"  formControlName="heading" name="heading" [(ngModel)]="queryItem.heading" required ></h4>

@@ -1,10 +1,10 @@
 .adminview{
-    background-image: url('../../assets/images/cool-background.svg');
+    background-image: url('../../assets/images/19366.jpg');
     background-size: cover;
     background-attachment: fixed;
     height:100%;
     display: flex;
-    padding:20px;
+    padding:45px 20px 20px 20px;
 }
 .card{
     padding-top: 2px;

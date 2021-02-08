@@ -1,5 +1,6 @@
 <app-navigation></app-navigation>
-<div class="container">
+<div class="logindiv">
+  <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
         <form (ngSubmit)=validateuser() class="sign-in-form">
@@ -29,7 +30,7 @@
               <i class="fab fa-linkedin-in"></i>
             </a>
           </div>
-          <div><p class="social-text">Are you an Admin?Try logging in <a routerLink="/loginadmin">here</a></p></div>
+          <div><p class="social-text">Are you an Admin?Try logging in <a routerLink="/login/admin">here</a></p></div>
         </form>
         <form [formGroup]="registerform" (ngSubmit)=adduser() class="sign-up-form">
           <h2 class="title">Sign up</h2>
@@ -39,6 +40,7 @@
                 Enter a Valid Email
             </div>
           </div>
+          <div [class.d-none] class="alert alert-danger" *ngIf="!emailmatch">Email already Exist</div>
           <div [class.d-none] *ngIf="registerform.get('password').touched && registerform.get('password').invalid"
                           class="alert alert-danger">
               <div *ngIf="registerform.get('password').errors.pattern">
@@ -115,3 +117,4 @@
       </div>
     </div>
   </div>
+</div>

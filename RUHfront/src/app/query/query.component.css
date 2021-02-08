@@ -1,27 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 .userquery{
-    background-image: url('../../assets/images/cool-background.svg');
+    background-image: url('../../assets/images/19366.jpg');
     background-size: cover;
     background-attachment: fixed;
     height:100%;
     display: flex;
-    padding:20px;
+    padding:55px 20px 20px 20px;
 }
 .left{
     width:50%;
     /* display: flex; */
 }
 .btnwidthleft{
-    background-color: #4481eb;
+    background-color:black;
     color:white;
     width:90%;
     text-align: left;
     margin-bottom: 20px;
 }
 .querybtn{
+    display: flex;
     background-color:#e3def0;
     color:black;
     width:70%;
+    height:6vh;
     margin-left: 40px;
     margin-bottom: 3px;
     text-align: left;
@@ -58,20 +60,34 @@
     height: 40px;
 }
 .btnwidthright{
-    background-color:white;
-    color:#4481eb;
+    background-color:rgb(248, 248, 248);
+    color:black;
+    font-weight: 500;
     border-color: white;
     width:80%;
     text-align: left;
     margin-bottom: 20px;
 }
+/* .date{
+    padding-left: 10px;
+} */
 .str1{
     display:inline-block;
     width:35%;
-    color:white;
+    color:black;
     text-align:left;
     margin-left: 25px;
 }
 .alert{
     width:80%!important;
+}
+.tgl{
+    width:30%;
+}
+.wdth{
+    width:80%;
+}
+.addbtn:disabled{
+    color: rgba(253, 252, 252, 0.74);
+    background-color: rgba(0, 128, 0, 0.562);
 }

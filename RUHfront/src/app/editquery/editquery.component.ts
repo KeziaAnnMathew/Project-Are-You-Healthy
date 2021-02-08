@@ -13,7 +13,7 @@ export class EditqueryComponent implements OnInit {
   idval:string='';
   id='';
   editform:FormGroup|any
-  query:any=new QueryModel('','','','','','');
+  query:any=new QueryModel('','','','','','','');
   constructor(public serv:RuhserviceService,private router:Router,private route:ActivatedRoute,private formbuilder:FormBuilder) { }
 
   ngOnInit(): void {
@@ -23,7 +23,6 @@ export class EditqueryComponent implements OnInit {
       this.serv.getsinglequery(this.id)
       .subscribe((res)=>{
         this.query=JSON.parse(JSON.stringify(res))
-        console.log(this.query)
       })
       this.editform=this.formbuilder.group({
         'heading':[this.query.heading,[Validators.required]],
@@ -32,7 +31,6 @@ export class EditqueryComponent implements OnInit {
       })
   }
   editing(){
-    console.log(this.query)
     this.serv.editquery(this.query,this.id)
     .subscribe((res:any)=>{
       this.idval=res.doc.userid;

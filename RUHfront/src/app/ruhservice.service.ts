@@ -14,6 +14,7 @@ export class RuhserviceService {
   search:boolean=false;
   readonly baseurl='http://localhost:3000';
   constructor(private http:HttpClient) { }
+  
 
   setSearchKeySubject(searchValue:string){
     this.searchKeySubject.next(searchValue)
@@ -22,6 +23,10 @@ export class RuhserviceService {
   getSearchKeySubjectAsObs(){
     return this.searchKeySubject.asObservable(); 
   }
+
+
+
+
   validateuser(user:any){
     return this.http.post<any>(this.baseurl+`/login/user`,{"user":user})
 
@@ -71,6 +76,10 @@ export class RuhserviceService {
     formdata.append("bmi",prof.bmi);
     formdata.append("pulse",prof.pulse);
     return this.http.put(this.baseurl+`/profile/editprofile/${_id}`,formdata)
+  }
+  editpassword(_id:string,password:any){
+    console.log(_id,password)
+    return this.http.put(this.baseurl+`/profile/editprofile/changepwd/${_id}`,{'password':password})
   }
   addsuggestion(_id:string,suggestion:string){
     return this.http.put(this.baseurl+`/admin/addsuggestion/${_id}`,{"suggestions":suggestion})

@@ -44,7 +44,7 @@ function router(){
         const id=req.params.id;
         Userdata.findOne({_id:id},(err,doc)=>{
             if(!doc){
-               console.log("hi");
+                res.send(doc);
                }  
             else{
                 res.send(doc);
@@ -57,12 +57,12 @@ function router(){
         const id=req.params.id;
         Querydata.find({userid:id},(err,doc)=>{
             if(!doc){
-                console.log("hi");
+                res.send(doc);
                } 
                else{
                    res.send(doc);
                }
-        })
+        }).sort({date:-1})
 
     })
     userRouter.get('/query/:id',function(req,res){
@@ -71,7 +71,7 @@ function router(){
         const id=req.params.id;
         Querydata.findOne({_id:id},(err,doc)=>{
             if(!doc){
-                console.log("hi");
+                res.send(doc);
                } 
                else{
                    res.send(doc);
@@ -82,26 +82,25 @@ function router(){
         res.header("Access-Control-Allow-Origin", "*")
         res.header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS")
         const id=req.params.id;
-        console.log(id);
         var queryval={
             heading:req.body.query.heading,
             area: req.body.query.area,
             comments: req.body.query.comments,
             suggestions:'',
+            date:new Date(),
             userid:id
         }
         var queryItem= Querydata(queryval);
-        console.log(queryItem)
         queryItem.save();
     })
     userRouter.put('/editquery/:id',verifyToken,function(req,res){
         res.header("Access-Control-Allow-Origin", "*")
         res.header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS")
         const id=req.params.id;
-        console.log(id);
         var queryval={
             heading:req.body.query.heading,
             area: req.body.query.area,
+            date:new Date(),
             comments: req.body.query.comments
         }
         Querydata.findByIdAndUpdate({_id:id},queryval,(err,doc)=>{
@@ -113,7 +112,7 @@ function router(){
         res.header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS")
         const id=req.params.id;
         Querydata.findByIdAndRemove({_id:id},(err,doc)=>{
-            console.log(doc);
+            res.send({doc:doc})
         })
     })
     userRouter.put('/editprofile/:id',upload.single('img'),function(req,res){
@@ -133,6 +132,17 @@ function router(){
             bmi:req.body.bmi,
             gender:req.body.gender,
             img:img
+        }
+        Userdata.findByIdAndUpdate({_id:id},profval,(err,doc)=>{
+            res.send({doc:doc})
+        })
+    })
+    userRouter.put('/editprofile/changepwd/:id',function(req,res){
+        res.header("Access-Control-Allow-Origin", "*")
+        res.header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS")
+        const id=req.params.id;
+        var profval={
+            password:req.body.password
         }
         Userdata.findByIdAndUpdate({_id:id},profval,(err,doc)=>{
             res.send({doc:doc})

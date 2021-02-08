@@ -1,17 +1,48 @@
-<app-navigation></app-navigation>
+<!-- <app-navigation></app-navigation> -->
+<!-- //////////navigation for home -->
+<nav class="navbar navbar-expand-lg navbar-light navig">
+    <a routerLink='/'><img class="logo" src="../../assets/images/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="homenav navbar-nav mr-auto">
+        <li>
+          <a class="pagenav nav-link myactive" href="#home" >Home</a></li>
+          <li><a class="pagenav nav-link" href="#services">Services</a></li>
+          <li><a class="pagenav nav-link" href="#working">Working</a></li>
+          <li><a class="nav-link" routerLink="/profile/editprofile" *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active">Edit Profile</a></li>
+          <li> <a class="nav-link" routerLink="/profile/query" *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active">My Concerns</a></li>
+        
+      </ul>
+      <ul class="navbar-nav navbar-right">
+        <li> <a class="nav-link" routerLink="/profile" *ngIf="serv.loggedIn() && serv.userlogg()" routerLinkActive="myactive active" [routerLinkActiveOptions]="{exact:true}">{{profile.uname}}</a></li>
+        <li> <a class="nav-link" routerLink="/adminview" *ngIf="serv.loggedIn() && !serv.userlogg()" routerLinkActive="myactive active">Admin Profile</a></li>
+        <li> <a class="nav-link" routerLink="/login" *ngIf="!serv.loggedIn()" routerLinkActive="myactive active" [routerLinkActiveOptions]="{exact:true}">Login|Signup</a></li>
+        <li> <a class="nav-link" *ngIf="serv.loggedIn()" (click)="logoutfn()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
 <div class="indexcontainer">
-    <div class="top">
-        <div class="quote">
-            <blockquote><h2>“The good physician treats the disease; the great physician treats the patient who has the disease.”</h2></blockquote>
-            <figcaption>-Sir William Osler </figcaption>
-        </div>
-        <div class="makeprof">
-            <h2>Get Your Concerns  <br>Solved !!</h2>
-            <button class="btn btn-success"><a routerLink='/login'>Get Solutions</a></button>
+    <div id="home" class="top">
+        <div class="toplyr">
+            <div class="quote">
+                <blockquote><h2>“The good physician treats the disease; the great physician treats the patient who has the disease.”</h2></blockquote>
+                <figcaption>-Sir William Osler </figcaption>
+            </div>
+        
+            <div class="makeprof">
+                <h2>Get Your Concerns  <br>Solved !!</h2>
+                <button class="btn btn-success"><a routerLink='/login'>Get Solutions</a></button>
+            </div>
+        
         </div>
     </div>
     <div class="bottom">
-        <div class="bottomleft">
+        <div id="services" class="bottomleft">
             <div class="leftlayer">
                 <h1>24/7 Service</h1>
                 <h3> Your concern is our Highest priority. We ensure unbroken service.</h3>
@@ -30,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div class="works">
+    <div id="working" class="works">
         <H4>How It Works</H4>
         <div class="working">
             <div class="step">

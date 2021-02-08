@@ -1,7 +1,7 @@
 <app-navigation></app-navigation>
 <div class="adminquery">
     <div class="left">
-        <button class="btn btnwidthleft" type="button">Profile Details</button>
+        <button class="btn btnwidthleft" type="button">User Profile</button>
         <div id="profilesection">
             <div class="leftprof">
                 <img  class="image"[src]="profile.img" alt="">
@@ -20,11 +20,11 @@
         </div>
     </div>
     <div class="right">
-        <button class="btn btnwidthright" type="button" data-toggle="collapse" data-target="#querysection" aria-expanded="false" aria-controls="querysection">View User Queries</button>
+        <button class="btn btnwidthright" type="button" data-toggle="collapse" data-target="#querysection" aria-expanded="false" aria-controls="querysection">View User Concerns</button>
         <div class="collapse multi-collapse" id="querysection">
             <div [class.d-none] class="alert alert-danger" *ngIf="noquery">No Queries Available</div>
-            <div *ngFor="let query of queries;let i=index">
-            <h3><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}</a></h3>
+            <div *ngFor="let query of queries | filterquery:filterName:'heading';let i=index ">
+            <h3 class="toggle"><p></p><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}<p class="wdth"></p><p class="tgl">{{query.date | slice:0:10}}</p></a></h3>
             <div class="singlequery collapse"id="singlequerysection-{{i}}">
                 <p><strong class="str">Affected Part</strong>:{{query.area}}</p>
                 <p><strong class="str">Symptoms & Comments</strong>: {{query.comments}}</p>

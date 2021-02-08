@@ -5,6 +5,7 @@ export class QueryModel{
         public comments:string,
         public userid:string,
         public suggestions:string,
+        public date:string,
         public _id:string
 
     ){

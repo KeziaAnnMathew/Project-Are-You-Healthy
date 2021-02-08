@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { QueryModel } from '../query.model';
 import { RuhserviceService } from '../ruhservice.service';
 import { UserModel } from '../user.model';
+import { Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-adminqueryview',
@@ -12,9 +13,11 @@ import { UserModel } from '../user.model';
 export class AdminqueryviewComponent implements OnInit {
   id:string='';
   profile:UserModel|any;
+  private searchKeySubscription=new Subscription
   queries:QueryModel|any;
   noquery=false;
-  query=new QueryModel('','','','','','');
+  filterName='';
+  query=new QueryModel('','','','','','','');
   constructor(public serv:RuhserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -34,8 +37,10 @@ export class AdminqueryviewComponent implements OnInit {
       else{
         this.noquery=false;
       }
-      console.log(this.noquery)
     })
+    this.searchKeySubscription= this.serv.getSearchKeySubjectAsObs().subscribe((val)=>{
+      this.filterName=val;
+  })  
   }
   addsugg(query:QueryModel){
     this.serv.addsuggestion(query._id,query.suggestions)
@@ -49,4 +54,8 @@ export class AdminqueryviewComponent implements OnInit {
     .subscribe(data=>{
     })
   }
+  ngOnDestroy(){
+    this.searchKeySubscription.unsubscribe();
+  }
+  
 }

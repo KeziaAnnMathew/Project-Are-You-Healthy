@@ -10,11 +10,15 @@ import { UserModel } from '../user.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  profiles:UserModel|any;
   hide=true;
+  valid=true;
   user={
     email:'',
     password:''
   }
+  i=0;
+  emailmatch:boolean=true;
   errorval:boolean=false;
   userItem=new UserModel('','','','','','',0,0,0,0,null,'');
   registerform:FormGroup|any;
@@ -25,6 +29,9 @@ export class LoginComponent implements OnInit {
  
   container:any;
   ngOnInit(): void {
+    this.serv.getallprofiles().subscribe((data)=>{
+      this.profiles=JSON.parse(JSON.stringify(data));
+    })
     this.registerform=this.formBuilder.group({
       'fname':[this.userItem.fname,[Validators.required]],
       'lname':[this.userItem.lname,[Validators.required]],
@@ -60,14 +67,34 @@ export class LoginComponent implements OnInit {
     
 
   }
+  emailval(){
+    for(this.i=0;this.i<this.profiles.length;this.i++){
+      if(this.userItem.email==this.profiles[this.i].email){
+        this.valid=false;
+        break;
+      }
+      else{
+        this.valid=true;
+      }
+    }
+  }
   adduser(){
-    this.serv.adduser(this.userItem)
-    console.log(this.userItem)
-    this.container?.classList.remove("sign-up-mode");
+    this.emailval();
+    if(this.valid){
+      this.serv.adduser(this.userItem);
+      this.userItem=new UserModel('','','','','','',0,0,0,0,null,'');
+      this.container?.classList.remove("sign-up-mode");
+    }
+    else{
+      this.emailmatch=false;
+      setTimeout(()=>{
+        this.emailmatch =true;
+      }, 3000);
+    }
   }
   adminlogin(){
 
-    this.router.navigate(['/loginadmin']);
+    this.router.navigate(['/login/admin']);
   }
 
 }

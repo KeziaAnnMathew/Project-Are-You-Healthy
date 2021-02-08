@@ -1,43 +1,10 @@
-.userprofile{
-    background-image: url('../../assets/images/cool-background.svg');
-    background-size: cover;
-    height:100%;
-    padding:20px;
-    
-}
-.usersection{
-    margin-left:10%;
-    margin-top: 60px;
-    margin-right:14%;
-    padding-top: 20px;
-    display: flex;
-    height:53vh;
-    background-color:rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 2px 5px black;
-}
-.imagesection{
-    padding-left: 50px;
-    width:50%;
-    margin-left: 20px;
-    
-}
-.profilesection{
-    padding-top: 40px;
-    margin-left: 20px;
-}
-.str1{
-    display:inline-block;
-    width:80px;
-    text-align:left;
-    margin-left: 25px;
-}
 .btnclass{
     display: flex;
     flex-direction: row;
 }
 .desbtn{
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 7px;
     border-radius: 5px;
     width:115px;
     height: 40px;
@@ -49,4 +16,156 @@
 .btntext{
     padding-top: 5px;
     font-size: medium;
+} 
+
+
+.maincont{
+    background-image: url('../../assets/images/19366.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding-top: 45px;
+}
+.det{
+    /* background-color: red; */
+    height:50vh;
+    width:100%;
+    display: flex;
+    
+}
+.health{
+    /* background-color: rgb(10, 10, 10); */
+    /* height:50vh; */
+    width:69%;
+    display: flex;
+    margin-top: 10vh;
+    margin-left: 2vh;
+}
+.section1{
+    width:38%;
+    height:50vh;
+    display: flex;
+}
+.section2{
+    width:31%;
+    height:50vh;
+
+}
+.section3{
+    width:31%;
+    /* height:100vh; */
+}
+.image{
+    /* width:70%; */
+    height:40vh;
+    width:83%;
+    border-radius: 10px;
+    padding:20px;
+    margin-left: 20px;
+    margin-top:20px;
+    display: flex;
+    background-color: rgba(230, 230, 230, 0.856);
+}
+.personal{
+    padding-left:20px;
+    padding-top: 40px;
+}
+.personal h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(241, 94, 107, 0.911);
+}
+.personal h3{
+    font-weight: 500;
+
+}
+.str1{
+    display:inline-block;
+    width:80px;
+    text-align:left;
+    margin-left: 25px;
+}
+.deth{
+    display: flex;
+    width:14vw;
+    height: 30vh;
+    border-radius: 8px;
+    background-color: rgba(247, 245, 245, 0.925);
+    margin-top: 55px;
+    margin-left:30px;
+}
+.deth h3{
+    text-align: center;
+    padding-left:5px!important;
+}
+.deth .hedng{
+    background-color: rgb(245, 160, 245);
+    /* font-weight: 500;
+    font-size: 15px; */
+    width:8px;
+    /* text-align: center; */
+    border-radius: 8px;
+    padding-top: 38px;
+}
+.deth .data{
+    padding-top: 15px;
+}
+.deth .data h3{
+    font-weight: 700;
+}
+.section3 h1{
+    padding-top: 62%;
+    padding-right: 15px;
+    font-weight: 500;
+    color:rgb(8, 6, 105);
+    text-align: center;
+}
+.section3 a{
+    text-align: center;
+    padding-left: 120px;
+    color: rgb(125, 250, 94);
+    font-size: 20px;
+    padding-top:5px;
+    text-decoration: underline;
+}
+.section3 a:hover{
+    cursor: pointer;
+}
+.bmi{
+    display: flex;
+    height:12vh;
+    background-color: white;
+    margin-left: 60px;
+    margin-top: 5%;
+    /* border-radius: 10px; */
+    width:7vw;
+    box-shadow: 2px 2px 5px black;
+}
+.bmi .hedng{
+    background-color: rgb(113, 241, 171);
+    font-weight: 500;
+    font-size: 15px;
+    width:1vw;
+    text-align: center;
+    /* border-radius: 10px; */
+    padding-top: 30px;
+}
+.bmi h3{
+    font-weight: 600;
+    text-align: center;
+}
+.bmi .data{
+    text-align: center;
+    padding-left:20px;
+    /* padding-top: 28px; */
+}
+.update{
+    margin-top:40px;
+    margin-left: 15%;
+}
+.update h1{
+    color:black;
+    font-weight: 500;
+}
+.update .btnclass{
+    margin-left: 60%;
 }

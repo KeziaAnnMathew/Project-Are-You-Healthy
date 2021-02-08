@@ -3,11 +3,14 @@
 input {
   font-family: "Poppins", sans-serif;
 }
+.logindiv{
+  padding-top: 45px;
+}
 .container {
   position: relative;
   min-width: 100%;
   background-color: #fff;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -85,6 +88,7 @@ mat-icon{
   color: #acacac;
   transition: 0.5s;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .input-field input {
