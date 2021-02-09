@@ -10,12 +10,14 @@ For Backend
 server will be ready at port 3000.
 
 For frontend
+
 5. Copy Node modules to directory RUHfront
 6. Redirect path to RUHfront : cd RUHfront (from parent folder)
 7. Install packages: npm install
 8. Run Frontend: ng serve
 
 For Admin Login
+
 Credentials:
 Username/email: admin/admin@mail.com
 password:admin
