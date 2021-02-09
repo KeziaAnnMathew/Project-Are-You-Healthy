@@ -4,6 +4,7 @@ How to run
 2. Open the folder path in editor or cmd.
 
 For Backend
+
 3. Install packages: npm install
 4. Run backend: nodemon app.js/ node app.js
 server will be ready at port 3000.
