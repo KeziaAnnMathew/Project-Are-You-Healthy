@@ -23,3 +23,5 @@ Credentials:
 Username/email: admin/admin@mail.com
 
 password:admin
+
+Hosted link: http://ec2-18-216-108-160.us-east-2.compute.amazonaws.com/
