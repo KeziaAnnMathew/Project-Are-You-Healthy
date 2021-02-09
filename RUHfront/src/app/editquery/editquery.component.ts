@@ -33,9 +33,10 @@ export class EditqueryComponent implements OnInit {
   editing(){
     this.serv.editquery(this.query,this.id)
     .subscribe((res:any)=>{
-      this.idval=res.doc.userid;
-       this.router.navigate([`profile/query/${this.idval}`])
+       this.router.navigate([`profile/query`])
     })
+    alert("Succesfully Edited")
+
    
   }
 }

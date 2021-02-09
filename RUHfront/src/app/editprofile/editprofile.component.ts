@@ -48,6 +48,7 @@ export class EditprofileComponent implements OnInit {
     this.serv.editprofile(this.id,this.profileItem,this.selectedFile)
     .subscribe((data)=>{
     })
+    alert("Succesfully Edited");
     this.router.navigate([`/profile`])
   }
   change(){

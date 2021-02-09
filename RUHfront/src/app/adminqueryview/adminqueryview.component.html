@@ -26,7 +26,7 @@
             <div *ngFor="let query of queries | filterquery:filterName:'heading';let i=index ">
             <h3 class="toggle"><p></p><a class="btn btn-link querybtn" type="button" data-toggle="collapse" href="#singlequerysection-{{i}}" aria-expanded="false" aria-controls="singlequerysection">{{query.heading | uppercase}}<p class="wdth"></p><p class="tgl">{{query.date | slice:0:10}}</p></a></h3>
             <div class="singlequery collapse"id="singlequerysection-{{i}}">
-                <p><strong class="str">Affected Part</strong>:{{query.area}}</p>
+                <p><strong class="str">Affected Part</strong>: {{query.area}}</p>
                 <p><strong class="str">Symptoms & Comments</strong>: {{query.comments}}</p>
                 <a class="btn btn-link sgbtn" type="button" data-toggle="collapse" href="#sugges-{{i}}" aria-expanded="false" aria-controls="sugges">Suggestions</a>
                 <div class="collapse adjst" id="sugges-{{i}}">
