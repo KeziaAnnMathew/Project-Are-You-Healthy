@@ -1,4 +1,4 @@
-# Project
+# Project - Are You Healthy
 How to run
 1. Clone or download zip file of repository and unzip or extract.
 2. Open the folder path in editor or cmd.
